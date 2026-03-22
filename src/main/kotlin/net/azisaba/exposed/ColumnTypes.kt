@@ -7,6 +7,7 @@ import net.kyori.adventure.text.format.ShadowColor
 import net.kyori.adventure.text.format.TextColor
 import net.kyori.adventure.text.serializer.gson.GsonComponentSerializer
 import net.kyori.adventure.text.serializer.json.JSONComponentSerializer
+import net.kyori.adventure.util.TriState
 import org.jetbrains.exposed.v1.core.Column
 import org.jetbrains.exposed.v1.core.Table
 
@@ -22,3 +23,5 @@ fun Table.sound(name: String, length: Int = 255): Column<Sound> = registerColumn
 fun Table.shadowColor(name: String): Column<ShadowColor> = registerColumn(name, ShadowColorColumnType)
 
 fun Table.textColor(name: String): Column<TextColor> = registerColumn(name, TextColorColumnType)
+
+fun Table.triState(name: String): Column<TriState> = registerColumn(name, TriStateColumnType)
