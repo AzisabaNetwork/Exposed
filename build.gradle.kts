@@ -10,6 +10,7 @@ repositories {
 }
 
 dependencies {
+    compileOnly(libs.adventure.api)
     compileOnly(libs.exposed.core)
     testImplementation(kotlin("test"))
 }
