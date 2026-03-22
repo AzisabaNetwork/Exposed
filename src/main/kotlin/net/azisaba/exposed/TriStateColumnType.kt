@@ -8,7 +8,7 @@ import org.jetbrains.exposed.v1.core.vendors.PostgreSQLDialect
 import org.jetbrains.exposed.v1.core.vendors.currentDialect
 import java.sql.Blob
 
-object TriStateColumnType : ColumnType<TriState>() {
+internal object TriStateColumnType : ColumnType<TriState>() {
     override fun sqlType(): String = when (currentDialect) {
         is PostgreSQLDialect -> "SMALLINT"
         is MysqlDialect -> "TINYINT"
