@@ -1,8 +1,8 @@
 plugins {
-    kotlin("jvm") version "2.3.0"
+    alias(libs.plugins.kotlin)
 }
 
-group = "net.azisaba"
+group = "net.azisaba.exposed"
 version = "1.0-SNAPSHOT"
 
 repositories {
@@ -10,6 +10,7 @@ repositories {
 }
 
 dependencies {
+    compileOnly(libs.exposed.core)
     testImplementation(kotlin("test"))
 }
 
