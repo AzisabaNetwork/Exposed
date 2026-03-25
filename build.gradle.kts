@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "net.azisaba.exposed"
-version = System.getenv("VERSION") ?: throw GradleException("Environment variable VERSION is required")
+version = System.getenv("VERSION") ?: "0.0.0-SNAPSHOT"
 
 val exposed = libs.exposed
 
