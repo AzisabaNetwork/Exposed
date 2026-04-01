@@ -4,3 +4,4 @@ plugins {
 rootProject.name = "minecraft-exposed"
 
 include("modules:adventure")
+include("modules:paper")
